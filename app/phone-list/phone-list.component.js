@@ -7,7 +7,9 @@ angular.
     template: require('phone-list/phone-list.template.html'),
     controller: ['Phone',
       function PhoneListController(Phone) {
-        this.phones = Phone.query();
+        Phone.query().then(phones => {
+          this.phones = phones;
+        });
         this.orderProp = 'age';
       }
     ]
