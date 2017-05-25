@@ -1,8 +1,8 @@
 import * as angular from 'angular';
 import { downgradeComponent } from '@angular/upgrade/static';
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { PhoneService, PhoneData } from '../../core/phone/phone.service';
-import { RouteParams } from '../ng1-upgraded-providers';
 
 @Component({
   selector: 'phone-detail',
@@ -11,8 +11,8 @@ import { RouteParams } from '../ng1-upgraded-providers';
 export class PhoneDetailComponent {
   phone: PhoneData;
   mainImageUrl: string;
-  constructor(routeParams: RouteParams, phoneService: PhoneService) {
-    phoneService.get(routeParams['phoneId']).then(phone => {
+  constructor(activatedRoute: ActivatedRoute, phoneService: PhoneService) {
+    phoneService.get(activatedRoute.snapshot.params['phoneId']).then(phone => {
       this.phone = phone;
       this.setImage(phone.images[0]);
     });

@@ -7,7 +7,7 @@ import 'angular-resource';
 import 'angular-route';
 
 import '../app.module';
-import '../app.config';
+// import '../app.config';
 import '../app.animations';
 // import '../core/core.module';
 // import '../core/phone/phone.module';
@@ -40,10 +40,10 @@ import { PhoneDetailModule } from './phone-detail/phone-detail.module';
     FormsModule,
     HttpModule,
     UpgradeModule,
+    AppRoutingModule,
     CoreModule,
     PhoneListModule,
-    PhoneDetailModule,
-    AppRoutingModule
+    PhoneDetailModule
   ],
   providers: [
     routeParamsProvider
