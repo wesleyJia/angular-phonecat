@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { APP_BASE_HREF, HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { PhoneListComponent } from './phone-list/phone-list.component';
 import { PhoneDetailComponent } from './phone-detail/phone-detail.component';
@@ -12,6 +13,10 @@ const routes: Routes = [
 
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
+    exports: [RouterModule],
+    providers: [
+      { provide: APP_BASE_HREF, useValue: '!' },
+      { provide: LocationStrategy, useClass: HashLocationStrategy },
+    ]
 })
 export class AppRoutingModule { }
