@@ -3,7 +3,11 @@ import { UpgradeModule } from '@angular/upgrade/static';
 
 @Component({
   selector: 'app-root',
-  template: `<div ng-view class="view-frame"></div>`
+  template: `
+    <router-outlet></router-outlet>
+    <div class="view-container">
+      <div ng-view class="view-frame"></div>
+    </div>  `
 })
 export class AppComponent implements OnInit {
 

@@ -25,6 +25,7 @@ import { HttpModule } from '@angular/http';
 import { UpgradeModule } from '@angular/upgrade/static';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 import { routeParamsProvider } from './ng1-upgraded-providers';
 import { CoreModule } from '../core/core.module';
 import { PhoneListModule } from './phone-list/phone-list.module';
@@ -41,7 +42,8 @@ import { PhoneDetailModule } from './phone-detail/phone-detail.module';
     UpgradeModule,
     CoreModule,
     PhoneListModule,
-    PhoneDetailModule
+    PhoneDetailModule,
+    AppRoutingModule
   ],
   providers: [
     routeParamsProvider
