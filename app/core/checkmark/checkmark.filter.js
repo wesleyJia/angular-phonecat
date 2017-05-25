@@ -1,5 +1,7 @@
 'use strict';
 
+angular.module('core', ['core.phone']);
+
 angular.
   module('core').
   filter('checkmark', function() {
