@@ -1,5 +1,3 @@
-import * as angular from 'angular';
-
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -24,5 +22,3 @@ import { PhoneModule } from './phone/phone.module';
   ]
 })
 export class CoreModule { }
-
-angular.module('core', ['core.phone']);

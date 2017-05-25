@@ -1,4 +1,3 @@
-import * as angular from 'angular';
 import { downgradeComponent } from '@angular/upgrade/static';
 import { Component, OnInit } from '@angular/core';
 import { PhoneService, PhoneData } from '../../core/phone/phone.service';
@@ -48,15 +47,3 @@ export class PhoneListComponent implements OnInit {
   }
 
 }
-
-// Define the `phoneList` module
-angular.module('phoneList', [
-  'ngRoute',
-  'core.phone'
-]);
-
-angular.module('phoneList')
-  .directive(
-  'phoneList',
-  downgradeComponent({ component: PhoneListComponent }) as angular.IDirectiveFactory
-  );

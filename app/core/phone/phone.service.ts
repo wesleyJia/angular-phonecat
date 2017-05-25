@@ -1,4 +1,3 @@
-import * as angular from 'angular';
 import { downgradeInjectable } from '@angular/upgrade/static';
 
 import { Injectable } from '@angular/core';
@@ -30,9 +29,3 @@ export class PhoneService {
       .toPromise();
   }
 }
-
-angular.module('core.phone', ['ngResource']);
-
-angular.
-  module('core.phone').
-  factory('Phone', downgradeInjectable(PhoneService));
