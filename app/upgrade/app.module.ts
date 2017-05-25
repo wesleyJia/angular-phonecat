@@ -12,9 +12,9 @@ import '../app.animations';
 // import '../core/core.module';
 // import '../core/phone/phone.module';
 // import '../core/phone/phone.service';
-// import '../core/checkmark/checkmark.filter';
-import '../phone-detail/phone-detail.module';
-import '../phone-detail/phone-detail.component';
+import '../core/checkmark/checkmark.filter';
+// import '../phone-detail/phone-detail.module';
+// import '../phone-detail/phone-detail.component';
 import '../phone-list/phone-list.module';
 import '../phone-list/phone-list.component';
 
@@ -25,7 +25,9 @@ import { HttpModule } from '@angular/http';
 import { UpgradeModule } from '@angular/upgrade/static';
 
 import { AppComponent } from './app.component';
+import { routeParamsProvider } from './ng1-upgraded-providers';
 import { CoreModule } from '../core/core.module';
+import { PhoneDetailModule } from './phone-detail/phone-detail.module';
 
 @NgModule({
   declarations: [
@@ -36,9 +38,11 @@ import { CoreModule } from '../core/core.module';
     FormsModule,
     HttpModule,
     UpgradeModule,
-    CoreModule
+    CoreModule,
+    PhoneDetailModule
   ],
   providers: [
+    routeParamsProvider
   ],
   bootstrap: [AppComponent]
 })
