@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CoreModule } from '../../core/core.module';
 import { PhoneDetailComponent } from './phone-detail.component';
 
 @NgModule({
   imports: [
-    CommonModule
+    CoreModule
   ],
-  declarations: [PhoneDetailComponent],
+  declarations: [
+    PhoneDetailComponent
+  ],
   entryComponents: [
     PhoneDetailComponent
   ]
